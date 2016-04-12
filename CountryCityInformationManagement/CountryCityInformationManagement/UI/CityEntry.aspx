@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CityEntry.aspx.cs" Inherits="CountryCityInformationManagement.UI.CityEntry" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CityEntry.aspx.cs" Inherits="CountryCityInformationManagement.UI.CityEntry"  EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,38 +77,38 @@
                         <div class="form-group">
                             <label for="nameTextBox" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-3">
-                                <asp:TextBox ID="nameTextBox" name="nameTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="nameTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="countryAboutLabel" class="col-sm-2 control-label">About</label>
                             <div class="col-sm-8">
-                                <asp:TextBox ID="aboutCkEditor" name="aboutCkEditor" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="aboutCkEditor" TextMode="MultiLine" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="dwellersTextBox" class="col-sm-2 control-label">No. of dwellers</label>
                             <div class="col-sm-3">
-                                <asp:TextBox ID="dwellersTextBox" name="dwellersTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="dwellersTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                                 <span id="errmsg"></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="locationTextBox" class="col-sm-2 control-label">Location</label>
                             <div class="col-sm-3">
-                                <asp:TextBox ID="locationTextBox" name="locationTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="locationTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="weatherTextBox" class="col-sm-2 control-label">Weather</label>
                             <div class="col-sm-3">
-                                <asp:TextBox ID="weatherTextBox" name="weatherTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="weatherTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="countryDropDownList" class="col-sm-2 control-label">Country</label>
                             <div class="col-sm-3">
-                                <asp:DropDownList ID="countryDropDownList" name="countryDropDownList" runat="server" CssClass="form-control input-sm">
+                                <asp:DropDownList ID="countryDropDownList" runat="server" CssClass="form-control input-sm">
                                 </asp:DropDownList>
                             </div>
                         </div>
