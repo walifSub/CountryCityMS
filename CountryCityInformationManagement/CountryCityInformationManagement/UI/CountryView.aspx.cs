@@ -14,7 +14,7 @@ namespace CountryCityInformationManagement.UI
         CountryManager countryManager = new CountryManager();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            if (!IsPostBack)
             {
                 LoadCountry();
             }
@@ -22,28 +22,28 @@ namespace CountryCityInformationManagement.UI
 
         protected void countrySearchButton_Click(object sender, EventArgs e)
         {
-            string message = "";
-            CountryViews countryViews = new CountryViews();
-            countryViews.Name = countrySearchTextBox.Text;
+                string message = "";
+                CountryViews countryViews = new CountryViews();
+                countryViews.Name = countrySearchTextBox.Text;
 
-            if (countryViews.Name != "")
-            {
-                List<CountryViews> countryViewList = countryManager.GetCountryByName(countryViews.Name);
-                if (countryViewList.Count > 0)
+                if (countryViews.Name != "")
                 {
+                    List<CountryViews> countryViewList = countryManager.GetCountryByName(countryViews.Name);
+                    if (countryViewList.Count > 0)
+                    {
 
-                    countryViewGridView.DataSource = countryViewList;
-                    countryViewGridView.DataBind();
+                        countryViewGridView.DataSource = countryViewList;
+                        countryViewGridView.DataBind();
+                    }
+                    else
+                    {
+                        message = "<div class='alert alert-danger' role='alert'>Sorry, we can't find " + countryViews.Name + " </div>";
+                    }
                 }
-                else
-                {
-                    message = "<div class='alert alert-danger' role='alert'>Sorry, we can't find " + countryViews.Name + " </div>";
-                }
-            }
-            messageLabel.Text = message;
-            Clear();
-            countryViewGridView.UseAccessibleHeader = true;
-            countryViewGridView.HeaderRow.TableSection = TableRowSection.TableHeader;
+                messageLabel.Text = message;
+                Clear();
+                countryViewGridView.UseAccessibleHeader = true;
+                countryViewGridView.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
 
         public void LoadCountry()
