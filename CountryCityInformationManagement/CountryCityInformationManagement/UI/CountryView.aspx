@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CountryView.aspx.cs" Inherits="CountryCityInformationManagement.UI.CountryView" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CountryView.aspx.cs" Inherits="CountryCityInformationManagement.UI.CountryView" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 <html lang="en">
