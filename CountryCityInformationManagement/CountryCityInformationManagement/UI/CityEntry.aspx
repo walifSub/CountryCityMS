@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CityEntry.aspx.cs" Inherits="CountryCityInformationManagement.UI.CityEntry" %>
-<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,7 +83,7 @@
                         <div class="form-group">
                             <label for="countryAboutLabel" class="col-sm-2 control-label">About</label>
                             <div class="col-sm-8">
-                                <CKEditor:CKEditorControl ID="aboutCkEditor" name="aboutCkEditor" BasePath="/Scripts/ckeditor/" runat="server"></CKEditor:CKEditorControl></td>
+                                <asp:TextBox ID="aboutCkEditor" name="aboutCkEditor" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
@@ -155,12 +154,20 @@
         <p class="text-muted">Design & Develop By Null Point Team,@All Right Reserved By BITM</p>
       </div>
     </footer>
-	<script src="../Scripts/jquery-1.12.3.min.js"></script>
-    <script src="../Scripts/bootstrap.min.js"></script>
+	  <script src="../Scripts/jquery-1.12.3.min.js"></script>
+      <script src="../Scripts/bootstrap.min.js"></script>
       <script src="../Scripts/jquery.validate.js"></script>
-    <script src="../Scripts/jquery.validate.min.js"></script>
-     <script>
-         $(document).ready(function () {
+      <script src="../Scripts/ckeditor/ckeditor.js"></script>
+      <script src="../Scripts/ckeditor/adapters/jquery.js"></script>
+      <script>
+          $(document).ready(function () {
+
+              //add ckeditor plugin
+              $(function () {
+                  CKEDITOR.replace('<%=aboutCkEditor.ClientID %>',
+                    { filebrowserImageUploadUrl: '/Upload.ashx' }); //path to “Upload.ashx”
+              });
+
              //add select one into dropdown list
              $("#countryDropDownList").prepend('<option Value="0" selected>Select One</option>');
 
