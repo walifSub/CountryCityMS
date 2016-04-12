@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CountryEntry.aspx.cs" Inherits="CountryCityInformationManagement.CountryEntry" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CountryEntry.aspx.cs" Inherits="CountryCityInformationManagement.UI.CountryEntry"  EnableEventValidation="false"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +63,7 @@
           <div class="message">
             <asp:Label ID="messageLabel" runat="server" CssClass="label-danger"></asp:Label>
           </div>
-         <div class="panel panel-default" style="margin-top:60px;">
+         <div class="panel panel-primary" style="margin-top:60px;">
               <div class="panel-heading">
                 <h3 class="panel-title">Country Entry</h3>
               </div>
@@ -72,13 +72,13 @@
                         <div class="form-group">
                             <label for="countryNameLabel" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-3">
-                                <asp:TextBox ID="countryNameTextBox" name="countryNameTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="countryNameTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="countryAboutLabel" class="col-sm-2 control-label">About</label>
                             <div class="col-sm-8">
-                                <asp:TextBox ID="countryAboutCkEditor" name="countryAboutCkEditor" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="countryAboutCkEditor" runat="server" CssClass="form-control input-sm" TextMode="MultiLine"></asp:TextBox>
                             </div>
                         </div>
                          <div class="form-group">

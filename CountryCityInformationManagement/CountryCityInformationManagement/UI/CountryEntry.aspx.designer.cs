@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CountryCityInformationManagement {
+namespace CountryCityInformationManagement.UI {
     
     
     public partial class CountryEntry {
