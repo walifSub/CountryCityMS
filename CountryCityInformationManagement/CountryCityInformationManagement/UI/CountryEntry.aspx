@@ -117,15 +117,17 @@
         <p class="text-muted">Design & Develop By Null Point Team,@All Right Reserved By BITM</p>
       </div>
     </footer>
-	<script src="../Scripts/jquery-1.12.3.min.js"></script>
-    <script src="../Scripts/bootstrap.min.js"></script>
-     <script src="../Scripts/jquery.validate.js"></script>
+	  <script src="../Scripts/jquery-1.12.3.min.js"></script>
+      <script src="../Scripts/bootstrap.min.js"></script>
+      <script src="../Scripts/jquery.validate.js"></script>
+      <script src="../Scripts/ckeditor/ckeditor.js"></script>
+      <script src="../Scripts/ckeditor/adapters/jquery.js"></script>
       <script>
           $(document).ready(function () {
 
               //add ckeditor plugin
               $(function () {
-                  CKEDITOR.replace('<%=txtCkEditor1.ClientID %>',
+                  CKEDITOR.replace('<%=countryAboutCkEditor.ClientID %>',
                     { filebrowserImageUploadUrl: '/Upload.ashx' }); //path to “Upload.ashx”
               });
 
