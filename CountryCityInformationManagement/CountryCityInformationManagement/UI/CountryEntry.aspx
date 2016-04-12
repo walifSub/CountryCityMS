@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CountryEntry.aspx.cs" Inherits="CountryCityInformationManagement.CountryEntry" %>
-<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -79,7 +78,7 @@
                         <div class="form-group">
                             <label for="countryAboutLabel" class="col-sm-2 control-label">About</label>
                             <div class="col-sm-8">
-                                <CKEditor:CKEditorControl ID="countryAboutCkEditor" name="countryAboutCkEditor" BasePath="/Scripts/ckeditor/" runat="server" CssClass="form-control"></CKEditor:CKEditorControl>
+                                <asp:TextBox ID="countryAboutCkEditor" name="countryAboutCkEditor" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                         </div>
                          <div class="form-group">
@@ -122,7 +121,15 @@
     <script src="../Scripts/bootstrap.min.js"></script>
      <script src="../Scripts/jquery.validate.js"></script>
       <script>
-           $(document).ready(function () {
+          $(document).ready(function () {
+
+              //add ckeditor plugin
+              $(function () {
+                  CKEDITOR.replace('<%=txtCkEditor1.ClientID %>',
+                    { filebrowserImageUploadUrl: '/Upload.ashx' }); //path to “Upload.ashx”
+              });
+
+              //add validate plugin
                $("#CountryEntryForm").validate({
                    rules: {
                        countryNameTextBox: {

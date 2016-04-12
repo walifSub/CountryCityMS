@@ -46,7 +46,7 @@ namespace CountryCityInformationManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CKEditor.NET.CKEditorControl countryAboutCkEditor;
+        protected global::System.Web.UI.WebControls.TextBox countryAboutCkEditor;
         
         /// <summary>
         /// saveButton control.
