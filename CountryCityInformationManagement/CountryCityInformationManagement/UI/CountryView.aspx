@@ -63,7 +63,7 @@
           <div class="message">
             <asp:Label ID="messageLabel" runat="server" CssClass="label-danger"></asp:Label>
         </div>
-         <div class="panel panel-default" style="margin-top:60px;">
+         <div class="panel panel-primary" style="margin-top:60px;">
               <div class="panel-heading">
                 <h3 class="panel-title">Search Criteria</h3>
               </div>
