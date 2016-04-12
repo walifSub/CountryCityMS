@@ -13,7 +13,7 @@ namespace CountryCityInformationManagement.DAL
 {
     public class CountryGateWay
     {
-        string connectionString = @"Server=(local)\SQLEXPRESS;Database=CountryCityInfo;Integrated Security=true;";
+        string connectionString = @"Server=.;Database=CountryCityInfo;Integrated Security=true;";
       
         public bool IsNameExist(string countryName)
         {

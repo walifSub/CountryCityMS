@@ -10,7 +10,7 @@ namespace CountryCityInformationManagement.DAL
 {
     public class CityGetWay
     {
-        string connectionString = @"Server=(local)\SQLEXPRESS;Database=CountryCityInfo;Integrated Security=true;";
+        string connectionString = @"Server=.;Database=CountryCityInfo;Integrated Security=true;";
 
         public int Insert(City city)
         {
